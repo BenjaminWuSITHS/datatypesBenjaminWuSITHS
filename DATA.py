@@ -2,10 +2,10 @@ import math
 
 x = 3
 y = float(3)
-print(x,y)
+# print(x,y)
 
 values = [1,2.23,5,7,2,30,15]
-print(values)
+# print(values)
 for i in values:
     print(i)
 
@@ -13,11 +13,12 @@ for i in values:
 ["t","e","s","t"]
 
 x = "this is a thing"
-y= x.split( )
+y= x.split( ) #string to a list of strings (splits by the space here)
 z = y[0] #1st word
-print(y)
-print(z)
-
+# print(y)
+# print(z)
+# len(x) <- checks characters
+# len(y) <- checks words
 #.append adds to a list
 
 
@@ -28,8 +29,8 @@ print(z)
 def countwords():
     words = input("give sentence") # asks user a question, input always a string
     word = words.split()
-    print(word)
-
+    print(len(word))
+# countwords()
 
 # odd or even function
 
@@ -47,12 +48,12 @@ def evenodd():
 # 0%, 15%, 20% or 25% depending on if the service was "bad, okay, good , or great ".
 
 def tips():
-     ask =int(input("WHAT iS YOU BILL??????"))
+     ask =float(input("WHAT iS YOU BILL??????"))
      print("OK BUD")
      service = input("IS SERVICE bad, okay, good or great?")
      joop = service.lower().replace(" ", "")
      if joop=="bad":
-         print(f"THE BILL IS${ask*1.250} and YOU SUCK")
+         print(f"THE BILL IS${ask*1.25} and YOU SUCK")
      elif joop =="okay":
          print(f"THE BILL IS${ask*1.20} and you KINDA suck")
      elif joop == "good":
@@ -87,13 +88,19 @@ def factorsGCF(num):
         number = (num % (i+1))
         if number == 0:
             numbers.append(i+1)
-    print(numbers)
+    return numbers
+
+# factorsGCF(50)
 
 def gcf(): 
-    num1 = int(input("give me one number"))       
+    num1 = int(input("give me one number"))
     num2 = int(input("give me another one"))
+    if num1 or num2 < 0:
+        print("cahnge ur number u big bum")
+        return()
     numbers1 = []
     numbers2 = []
+    commonfactors = []
     for i in range(num1):        # get factors for 1
         number1 = (num1 % (i+1))     
         if number1 == 0:
@@ -102,7 +109,13 @@ def gcf():
         number2 = (num2 % (i+1))
         if number2 == 0:
             numbers2.append(i+1)   
-    
+    for numb1 in numbers1:       # get common factors
+        for i in range(len(numbers2)):
+            if numb1 == numbers2[i]:
+                commonfactors.append(numb1)
+    if max(commonfactors) <= 0:
+        print ("there has been a big eror")
+        return()
+    else:
+        print (f"The GCF is {max(commonfactors)}")
 
-
-gcf()
