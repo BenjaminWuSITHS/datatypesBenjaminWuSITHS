@@ -1,5 +1,3 @@
-
-
 x = 3
 y = float(3)
 # print(x,y)
@@ -63,8 +61,7 @@ def tips():
      else:
          print(f"THAT WAS NOT ONE OF THE CHOICES, YOU BILL IS {ask*367836299999999999999321683686} AND YOU SUCK THE MOST")
 
-
-tips()
+# tips()
 
 #Create a function that accepts an input and determines all factors of the number.
 
@@ -80,24 +77,21 @@ def factors():
     
 # factors()
 
-# Create a function that accepts 2 arguments. Find the greatest common factor between those numbers.
-
 def factorsGCF(num):
     numbers = []
     for i in range(num):
-        number = (num % (i+1))
+        number = (num % (i+1)) # finds remainder between number and 1 through the number
         if number == 0:
-            numbers.append(i+1)
+            numbers.append(i+1) # if no remainder, add to list
     return numbers
 
 # factorsGCF(50)
+# Create a function that accepts 2 arguments. Find the greatest common factor between those numbers.
 
 def gcf(): 
     num1 = int(input("give me one number"))
     num2 = int(input("give me another one"))
-    if num1 or num2 < 0:
-        print("cahnge ur number u big bum")
-        return()
+
     numbers1 = []
     numbers2 = []
     commonfactors = []
@@ -116,6 +110,8 @@ def gcf():
     if max(commonfactors) <= 0:
         print ("there has been a big eror")
         return()
+    elif max(commonfactors) == 1337:
+        print ("You evil monster.")
     else:
         print (f"The GCF is {max(commonfactors)}")
-
+gcf()
