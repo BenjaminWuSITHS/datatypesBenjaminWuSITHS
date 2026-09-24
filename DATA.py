@@ -1,4 +1,4 @@
-import math
+
 
 x = 3
 y = float(3)
@@ -64,7 +64,7 @@ def tips():
          print(f"THAT WAS NOT ONE OF THE CHOICES, YOU BILL IS {ask*367836299999999999999321683686} AND YOU SUCK THE MOST")
 
 
-# tips()
+tips()
 
 #Create a function that accepts an input and determines all factors of the number.
 
