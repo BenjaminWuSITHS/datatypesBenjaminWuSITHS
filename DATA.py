@@ -77,7 +77,7 @@ def factors():
     
 # factors()
 
-def factorsGCF(num):
+def factors(num):
     numbers = []
     for i in range(num):
         number = (num % (i+1)) # finds remainder between number and 1 through the number
@@ -88,10 +88,7 @@ def factorsGCF(num):
 # factorsGCF(50)
 # Create a function that accepts 2 arguments. Find the greatest common factor between those numbers.
 
-def gcf(): 
-    num1 = int(input("give me one number"))
-    num2 = int(input("give me another one"))
-
+def gcf(num1, num2): 
     numbers1 = []
     numbers2 = []
     commonfactors = []
@@ -110,8 +107,7 @@ def gcf():
     if max(commonfactors) <= 0:
         print ("there has been a big eror")
         return()
-    elif max(commonfactors) == 1337:
-        print ("You evil monster.")
     else:
         print (f"The GCF is {max(commonfactors)}")
-gcf()
+
+gcf(100,88)
