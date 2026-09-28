@@ -117,11 +117,12 @@ def gcf(num1, num2):
 gcf(100,88)
 
 def gcf2(num1, num2):
-  common_factors = [i for i in range(1, min(num1, num2) + 1) if num1 % i == 0 and num2 % i == 0]
+ commonfactor = []
+ for i in range(1, min(num1, num2) + 1):
+    if num1 % i == 0 and num2 % i == 0:
+        commonfactor.append(i)
+     
 
-  if not common_factors:
-    print('There has been a big error')
-  else:
-    print(f'The GCF is {max(common_factors)}')
+ print(f'The GCF is {max(commonfactor)}')
 
 gcf2(100,88)
