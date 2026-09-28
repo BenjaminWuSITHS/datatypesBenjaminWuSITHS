@@ -75,15 +75,19 @@ def factors():
     print(numbers)
 
     
-# factors()
 
-def factors(num):
+
+def factorsGCF(num):
     numbers = []
     for i in range(num):
         number = (num % (i+1)) # finds remainder between number and 1 through the number
         if number == 0:
             numbers.append(i+1) # if no remainder, add to list
-    return numbers
+    print(numbers)
+
+factorsGCF(88)
+factorsGCF(100)
+factorsGCF(8800)
 
 # factorsGCF(50)
 # Create a function that accepts 2 arguments. Find the greatest common factor between those numbers.
@@ -111,3 +115,13 @@ def gcf(num1, num2):
         print (f"The GCF is {max(commonfactors)}")
 
 gcf(100,88)
+
+def gcf2(num1, num2):
+  common_factors = [i for i in range(1, min(num1, num2) + 1) if num1 % i == 0 and num2 % i == 0]
+
+  if not common_factors:
+    print('There has been a big error')
+  else:
+    print(f'The GCF is {max(common_factors)}')
+
+gcf2(100,88)
