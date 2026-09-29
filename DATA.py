@@ -114,7 +114,7 @@ def gcf(num1, num2):
     else:
         print (f"The GCF is {max(commonfactors)}")
 
-gcf(100,88)
+# gcf(100,88)
 
 def gcf2(num1, num2):
  commonfactor = []
@@ -125,4 +125,15 @@ def gcf2(num1, num2):
 
  print(f'The GCF is {max(commonfactor)}')
 
-gcf2(100,88)
+# gcf2(100,88)
+
+def spaces(N,Y,T):
+    for i in range(int(N)):
+        if Y[i] == "C" and T[i] == "C":
+            N-=1
+    print(N)
+
+Yes = [".","C",".","C","C"]
+Tod = ["C","C",".",".","C"]
+
+spaces(5,Yes,Tod)
