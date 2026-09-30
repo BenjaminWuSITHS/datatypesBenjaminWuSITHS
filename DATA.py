@@ -129,11 +129,11 @@ def gcf2(num1, num2):
 
 def spaces(N,Y,T):
     for i in range(int(N)):
-        if Y[i] == "C" and T[i] == "C":
+        if Y[i] == "." or T[i] == ".":
             N-=1
-    print(N)
+    print(f"GOOFY CREW WOBBLES {N} TIMES")
 
-Yes = [".","C",".","C","C"]
+Yes = ["C","C",".","C","C"]
 Tod = ["C","C",".",".","C"]
 
 spaces(5,Yes,Tod)
