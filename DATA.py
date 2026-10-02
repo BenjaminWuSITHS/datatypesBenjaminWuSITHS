@@ -137,3 +137,21 @@ Yes = ["C","C",".","C","C"]
 Tod = ["C","C",".",".","C"]
 
 spaces(5,Yes,Tod)
+
+def frenglish(Tx):
+    numS = numT = 0
+    lowTx = Tx.lower()
+    for i in lowTx:
+        if i == "s":
+            numS += 1
+        elif i == "t":
+            numT += 1
+    if numS >= numT:
+        print("french")
+    else:
+        print("english")
+
+cool = "The red cat sat on the mat. Why are you so sad cat? Don't ask that."
+frenglish(cool)
+
+    
