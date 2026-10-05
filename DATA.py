@@ -154,4 +154,20 @@ def frenglish(Tx):
 cool = "The red cat sat on the mat. Why are you so sad cat? Don't ask that."
 frenglish(cool)
 
-    
+def wizard(owner, N, duels):
+    history=[]
+    history.append(owner)
+    for fights in duels:
+        if fights[1] == owner:
+            owner = fights[0]
+            for i in range(len(history)):
+                if history[i] != owner:
+                    history.append(owner)
+    print(owner)
+    print(history)
+
+
+
+wizard("A",3,["BA", "CB", "DA"])
+wizard("N",5,["DA", "NB", "BA", "CD", "FA"])
+wizard("X",4,["AX","BX","XA","DA"])
