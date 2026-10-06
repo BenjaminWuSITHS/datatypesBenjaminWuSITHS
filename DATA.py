@@ -169,3 +169,15 @@ def wizard2(N, start, duels):
 
 
 wizard2(4,"X",["AX","BX","XA","DA"])
+
+def disease(ppl, infect, spread):
+    day=0
+    while infect <= ppl:
+        infect=infect+infect*spread
+        day +=1
+    print(day)
+
+
+
+
+disease(10,2,1)
