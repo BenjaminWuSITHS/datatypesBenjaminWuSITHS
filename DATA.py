@@ -171,13 +171,26 @@ def wizard2(N, start, duels):
 wizard2(4,"X",["AX","BX","XA","DA"])
 
 def disease(ppl, infect, spread):
+    
     day=0
+    new=infect
     while infect <= ppl:
-        infect=infect+infect*spread
         day +=1
+        print(f"day is{day}")
+        print(f"infect is{infect}")
+        print(f"new is{new}")
+        new = new*spread
+        infect = infect+new
+
     print(day)
 
+disease(750,1,5)
+
+def plan(totalmb, months, datause):
+    ogtotal = totalmb
+    for i in range(months):
+        totalmb = (totalmb - datause[i])+ ogtotal
+    print(totalmb)
 
 
-
-disease(10,2,1)
+plan(15,3,[15,10,20])
